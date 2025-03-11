@@ -1,19 +1,41 @@
-<mat-toolbar color="primary" class="stick-toolbar bg-indigo-600">
-    <span class="text-x1 font bold">Mi Plataforma</span>
+<nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md text-gray-900 p-4 flex justify-between items-center shadow-md z-50 border-b border-gray-200">
+  <!-- Menú Principal -->
+  <div class="ml-15 flex space-x-4">
+      <button class="transition-all duration-300 px-4 py-2 rounded bg-indigo-500 hover:bg-indigo-400 text-white shadow-sm focus:outline-none transform hover:scale-105">Inicio</button>
 
-    <span class="spacer"></span>
+      <!-- Prácticas -->
+      <div class="relative group">
+          <button class="transition-all duration-300 px-4 py-2 rounded bg-orange-500 hover:bg-orange-400 text-white shadow-sm focus:outline-none transform hover:scale-105">
+              Prácticas ▼
+          </button>
+          <div class="absolute hidden group-hover:block bg-white/90 backdrop-blur-md shadow-md mt-2 rounded border border-gray-200">
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica1">Práctica 1</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica2">Práctica 2</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica3">Práctica 3</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica4">Práctica 4</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica5">Práctica 5</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica6">Práctica 6</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica7">Práctica 7</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica8">Práctica 8</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica9">Práctica 9</a>
+              <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900" routerLink="practica10">Práctica 10</a>
 
-    <nav>
-        <button mat-button>Ejercicios</button>
-        <button mat-button>Tareas</button>
-        <button mat-button>Examen Practico</button>
-        <button mat-button>Acerca de</button>
-    </nav>
+          </div>
+      </div>
 
-    <span class="spacer"></span>
+      <!-- Examen Práctico -->
+      <button class="transition-all duration-300 px-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white shadow-sm focus:outline-none transform hover:scale-105">Examen Práctico</button>
+  </div>
 
-    
-    <button mat-icon-button ="menu">
-        <img class="user-avatar" src="assets/user.jpg" alt="Usuario">
-    </button>
-</mat-toolbar>
+  <!-- Icono Usuario -->
+  <div class="relative group">
+      <button class="flex items-center space-x-2 transition-all duration-300 px-4 py-2 rounded bg-gray-800 hover:bg-gray-600 text-white shadow-md focus:outline-none transform hover:scale-105">
+          <span>Usuario</span>
+          <img class="w-8 h-8 rounded-full border-2 border-white/30" src="https://via.placeholder.com/40" alt="User avatar" />
+      </button>
+      <div class="absolute hidden group-hover:block bg-white/90 backdrop-blur-md shadow-md right-0 mt-2 rounded border border-gray-200">
+          <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900">Perfil</a>
+          <a class="block px-4 py-2 transition-colors duration-300 hover:bg-gray-100 text-gray-900">Cerrar sesión</a>
+      </div>
+  </div>
+</nav>

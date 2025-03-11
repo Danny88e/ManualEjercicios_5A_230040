@@ -1,0 +1,11 @@
+<nav class="p-3 bg-gray-800/60 backdrop-blur-md flex items-center space-x-3 rounded-lg shadow-sm border border-white/30">
+  <ng-container *ngFor="let breadcrumb of breadcrumbs; let i = index">
+    <a 
+      class="text-gray-200 hover:text-indigo-400 transition-all duration-300 cursor-pointer font-medium text-sm py-1 px-2 rounded-lg transform hover:scale-105"
+      (click)="navigateTo(i)"
+    >
+      {{ breadcrumb.label }}
+    </a>
+    <span *ngIf="i < breadcrumbs.length - 1" class="text-gray-200">/</span>
+  </ng-container>
+</nav>

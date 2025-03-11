@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ManualEjercicios_5A_230040": {
+    "app-angular-230040": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/manual-ejercicios-5-a-230040",
+            "outputPath": "dist/app-angular-230040",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -27,7 +27,6 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -65,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ManualEjercicios_5A_230040:build:production"
+              "buildTarget": "app-angular-230040:build:production"
             },
             "development": {
-              "buildTarget": "ManualEjercicios_5A_230040:build:development"
+              "buildTarget": "app-angular-230040:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -91,7 +90,6 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/cyan-orange.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -101,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "fbd20a3c-1e6b-4515-9edf-1c33e72857d1"
+    "analytics": false
   }
 }

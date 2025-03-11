@@ -1,0 +1,47 @@
+<!-- Page Container (Envuelve todo) -->
+<div class="flex flex-col h-screen bg-gray-100 text-gray-900 fixed w-full">
+  
+  <!-- Navbar -->
+  <app-navbar class="bg-white text-gray-900 border-b border-gray-200 shadow-md w-full z-50">
+  </app-navbar>
+
+  <!-- Contenedor principal -->
+  <div class="flex flex-1 overflow-hidden mt-20">
+    
+    <!-- Sidebar -->
+    <app-sidebar
+      class="transition-all duration-300 shadow-sm rounded-lg bg-white text-gray-900 border border-gray-200 h-full hover:shadow-lg"
+      [ngClass]="{'hidden': !isSidebarVisible, 'w-1/4': isSidebarVisible}">
+    </app-sidebar>
+
+    <!-- Contenido principal que cambia de tamaño con el Sidebar -->
+    <div 
+      [ngClass]="{'w-full': !isSidebarVisible, 'w-3/4': isSidebarVisible}"
+      class="flex flex-col flex-grow bg-white text-gray-900 border border-gray-200 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300">
+
+      <!-- Content -->
+      <div class="flex flex-col flex-grow overflow-hidden">
+        
+        <!-- Breadcrumbs -->
+        <app-breadcrumb class="p-4 shadow-sm rounded-lg border-b border-gray-200 mb-4"></app-breadcrumb>
+
+        <!-- Contenido con scroll interno -->
+        <div class="flex-grow m-4 p-6 bg-white text-gray-900 shadow-sm rounded-lg border border-gray-200 overflow-y-auto hover:shadow-lg transition-all duration-300">
+          <router-outlet></router-outlet>
+        </div>
+
+        <!-- Footer (dentro de Content) -->
+        <app-footer class="h-16 w-full bg-white text-gray-900 border-t border-gray-200 shadow-sm mt-4"></app-footer>
+
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- Botón para ocultar/mostrar el Sidebar -->
+  <button 
+    (click)="toggleSidebar()" 
+    class="fixed top-5 left-4 bg-gray-200 text-gray-900 p-3 rounded-lg shadow-md z-80 border-t border-gray-200 hover:bg-gray-300 transition-colors duration-300">
+    ☰
+  </button>
+</div>
